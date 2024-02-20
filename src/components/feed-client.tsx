@@ -71,10 +71,10 @@ export default function FeedClient({feed, allItems}: {feed: Feed; allItems: Feed
           })}
         </ul>
       </main>
-      <footer className="flex items-center justify-end gap-4">
+      <footer className="flex items-center justify-between gap-4 lg:justify-end ">
         <button
           aria-disabled={page <= 1}
-          className="rounded-lg border border-fuchsia-950 bg-fuchsia-800 px-4 py-2 font-semibold transition-all hover:cursor-pointer hover:border-fuchsia-500 hover:bg-fuchsia-900 hover:text-white disabled:border-fuchsia-950 disabled:bg-fuchsia-950 disabled:opacity-10 disabled:hover:cursor-not-allowed"
+          className="w-1/2 rounded-lg border border-fuchsia-950 bg-fuchsia-800 px-4 py-2 font-semibold transition-all hover:cursor-pointer hover:border-fuchsia-500 hover:bg-fuchsia-900 hover:text-white disabled:border-fuchsia-950 disabled:bg-fuchsia-950 disabled:opacity-10 disabled:hover:cursor-not-allowed md:w-1/4 lg:w-auto"
           disabled={page <= 1}
           type="button"
           onClick={handlePreviousPage}
@@ -83,7 +83,7 @@ export default function FeedClient({feed, allItems}: {feed: Feed; allItems: Feed
         </button>
         <button
           aria-disabled
-          className="rounded-lg border border-fuchsia-950 bg-fuchsia-800 px-4 py-2 font-semibold transition-all hover:cursor-pointer hover:border-fuchsia-500 hover:bg-fuchsia-900 hover:text-white disabled:border-fuchsia-950 disabled:bg-fuchsia-950 disabled:opacity-40 disabled:hover:cursor-not-allowed"
+          className="w-1/2 rounded-lg border border-fuchsia-950 bg-fuchsia-800 px-4 py-2 font-semibold transition-all hover:cursor-pointer hover:border-fuchsia-500 hover:bg-fuchsia-900 hover:text-white disabled:border-fuchsia-950 disabled:bg-fuchsia-950 disabled:opacity-40 disabled:hover:cursor-not-allowed md:w-1/4 lg:w-auto"
           disabled={page >= totalPages}
           type="button"
           onClick={handleNextPage}
