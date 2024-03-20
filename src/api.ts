@@ -32,6 +32,7 @@ const api: API = {
       headers: {
         "Content-Type": "text/xml",
       },
+      cache: 'no-store'
     });
     const xml = await response.text();
     const parser = new XMLParser({
